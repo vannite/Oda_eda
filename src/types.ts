@@ -21,4 +21,17 @@ export interface DeliveryOption {
   name: string;
   price: number;
   type: 'delivery' | 'pickup';
+  condition?: string; // Условия из 3-го столбца
+}
+
+export interface PromoCode {
+  code: string;
+  discount: number; // Может быть процентом или фиксированной суммой
+  type: 'percent' | 'fixed';
+}
+
+export interface LoyaltyRecord {
+  userId: string;
+  amount: number;
+  date: string;
 }
