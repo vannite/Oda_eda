@@ -111,8 +111,14 @@ export default function App() {
     }
     
     const encodedMessage = encodeURIComponent(message);
-    const ownerId = 'bd77797';
-    const url = `https://t.me/${ownerId}?text=${encodedMessage}`;
+    
+    // ВАЖНО: ownerId должен быть вашим ЛИЧНЫМ юзернеймом (например, 'my_name'), а не юзернеймом бота.
+    // Если это бот, параметр ?text= работать не будет.
+    const ownerId = 'bd77797'; 
+    
+    // Используем t.me/share/url для максимальной совместимости на мобильных устройствах.
+    // Это откроет окно выбора чата с уже вставленным текстом заказа.
+    const url = `https://t.me/share/url?url=&text=${encodedMessage}`;
     
     WebApp.openTelegramLink(url);
   };
