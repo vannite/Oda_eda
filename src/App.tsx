@@ -683,6 +683,12 @@ export default function App() {
                 </div>
               </div>
 
+              <div className="text-center">
+                <p className="text-[10px] text-white/20 uppercase tracking-widest font-medium">
+                  Версия: 1.0.4 (Обновлено: 14.03 23:15)
+                </p>
+              </div>
+
               <div className="space-y-4">
                 <h3 className="text-sm font-bold uppercase tracking-widest text-white/40">Как это работает?</h3>
                 <div className="grid gap-3">
